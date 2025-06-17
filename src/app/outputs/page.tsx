@@ -2,7 +2,7 @@
 import SectionTable from "@/components/SectionTable";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
-import { useFunctions } from "../hooks/useFormStore";
+import { useFunctions } from "../../hooks/useFormStore";
 
 interface itemChildrenNews {
   description: string;
@@ -16,7 +16,7 @@ interface itemGetNews {
   content?: itemChildrenNews[];
 }
 
-export default function News() {
+export default function Outputs() {
   const router = useRouter();
   const [data, setData] = useState<itemGetNews[] | null>();
   const { getItems } = useFunctions();
@@ -27,7 +27,7 @@ export default function News() {
     } else router.replace("/login");
   }, [router]);
   const getData = async () => {
-    const res = await getItems("news/list");
+    const res = await getItems("outputs/list");
     if (res) {
       const data = res;
       // console.log("res", res.News);
@@ -36,6 +36,7 @@ export default function News() {
       console.warn("res is null");
     }
   };
+
   useEffect(() => {
     getData();
   }, []);
