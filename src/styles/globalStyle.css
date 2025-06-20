@@ -1,9 +1,10 @@
 button {
-  padding: 5px 10px;
   font-weight: 600;
   font-size: 14px;
+  height: 40px;
 }
 button > a {
+  padding: 10px;
   text-decoration: none;
   color: #333;
 }
@@ -194,7 +195,13 @@ button > a {
   border-bottom: 2px solid #fff;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  padding: 10px;
   gap: 10px;
+}
+.news > main > .news-content > .section-table > .section-table-content > div > div > button {
+  padding: 10px 0;
+  cursor: pointer;
 }
 .news > main > .news-content > .section-table > .section-table-content > div > div > p {
   font-size: 16px;

@@ -2,22 +2,20 @@
 import SectionTable from "@/components/SectionTable";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
-import { useFunctions } from "../../hooks/useFormStore";
+import { useFormStore, useFunctions } from "../../hooks/useFormStore";
 
-interface itemChildrenNews {
+interface itemChildren {
   description: string;
   photo_id: string;
 }
 
 interface itemGetNews {
-  main_title: string;
-  main_photo_id: string;
-  main_description: string;
-  content?: itemChildrenNews[];
+  [key: string]: string | number | Array<itemChildren>;
 }
 
 export default function CollegeStructure() {
   const router = useRouter();
+  const { setDataMony } = useFormStore();
   const [data, setData] = useState<itemGetNews[] | null>();
   const { getItems } = useFunctions();
 
@@ -47,10 +45,16 @@ export default function CollegeStructure() {
         <div className="news-content">
           {data ? (
             <SectionTable
+              editOptions={{
+                url: "/adding-college-structure",
+                setData: setDataMony,
+                getUrl: "college-structure/list",
+              }}
+              deleteOptions={{ url: "college-structure/delete", get: getData }}
               Items={data}
               headerTable={["", "title"]}
               styleHeader={{ gridTemplateColumns: "100px 200px" }}
-              styleItem={{ gridTemplateColumns: "100px 70%" }}
+              styleItem={{ gridTemplateColumns: "100px 1fr 200px" }}
             />
           ) : (
             ""

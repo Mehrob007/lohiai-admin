@@ -37,7 +37,6 @@ export default function AddingCollegeStructure({
         setTimeout(() => {
           setData("main_title", "");
           setData("main_photo_id", "");
-          setData("content", [{ description: "", photo_id: "" }]);
         }, 100);
       } catch (e) {
         console.error("Error sending data:", e);
@@ -49,7 +48,6 @@ export default function AddingCollegeStructure({
 
   useEffect(() => {
     if (edit) return;
-    setData("content", [{ description: "", photo_id: "" }]);
   }, [edit]);
 
   useEffect(() => {

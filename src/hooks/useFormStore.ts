@@ -10,8 +10,12 @@ interface FormState {
   data: { [key: string]: string | number | Array<contentItem> };
   errors: { [key: string]: string };
   setData: (field: string, value: string | number | Array<contentItem>) => void;
+  setDataMony: (data: {
+    [key: string]: string | number | Array<contentItem>;
+  }) => void;
   validate: (rules: ValidationRules) => boolean;
   resetErrors: () => void;
+  setClear: () => void;
 }
 
 type ValidationRules = {
@@ -33,6 +37,14 @@ export const useFormStore = create<FormState>((set, get) => ({
   setData: (field, value) =>
     set((state) => ({
       data: { ...state.data, [field]: value },
+    })),
+  setClear: () =>
+    set(() => ({
+      data: {},
+    })),
+  setDataMony: (data) =>
+    set(() => ({
+      data: data,
     })),
 
   resetErrors: () => set({ errors: {} }),
@@ -87,16 +99,13 @@ export const useFormStore = create<FormState>((set, get) => ({
   },
 }));
 
-interface itemChildrenNews {
+interface itemChildren {
   description: string;
   photo_id: string;
 }
 
 interface itemGetNews {
-  main_title: string;
-  main_photo_id: string;
-  main_description: string;
-  content?: itemChildrenNews[];
+  [key: string]: string | number | Array<itemChildren>;
 }
 // interface getNews {
 //   news: itemGetNews[];

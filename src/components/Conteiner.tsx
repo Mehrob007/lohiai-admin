@@ -1,4 +1,5 @@
 "use client";
+import { useFormStore } from "@/hooks/useFormStore";
 import { useGlobalState } from "@/stors/globalState";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -9,8 +10,14 @@ interface conteiner {
 
 export default function Conteiner({ children }: conteiner) {
   const pathName = usePathname();
+  const { setClear } = useFormStore();
   const { headerContent } = useGlobalState((state) => state);
-  console.log("pathName", pathName.split("-")[0] === "/adding" ? headerContent.backPath : headerContent.addPath);
+  console.log(
+    "pathName",
+    pathName.split("-")[0] === "/adding"
+      ? headerContent.backPath
+      : headerContent.addPath,
+  );
 
   return (
     <div className="components">
@@ -18,11 +25,14 @@ export default function Conteiner({ children }: conteiner) {
         <h1>{headerContent.title}</h1>
         <button>
           <Link
-            href={pathName.split("-")[0] === "/adding" ? headerContent.backPath : headerContent.addPath}
+            onClick={() => setClear()}
+            href={
+              pathName.split("-")[0] === "/adding"
+                ? headerContent.backPath
+                : headerContent.addPath
+            }
           >
-            {pathName.split("-")[0] === "/adding"
-              ? "Назад"
-              : "Добавить"}
+            {pathName.split("-")[0] === "/adding" ? "Назад" : "Добавить"}
           </Link>
         </button>
       </div>

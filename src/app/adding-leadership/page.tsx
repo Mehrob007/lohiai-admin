@@ -10,7 +10,11 @@ interface contentItem {
   photo_id: string;
 }
 
-export default function AddingLeadership({ editProps }: { editProps?: boolean }) {
+export default function AddingLeadership({
+  editProps,
+}: {
+  editProps?: boolean;
+}) {
   const { data, errors, setData, validate } = useFormStore();
   const [edit, setEdit] = React.useState(false);
 
@@ -33,7 +37,6 @@ export default function AddingLeadership({ editProps }: { editProps?: boolean })
         setTimeout(() => {
           setData("main_title", "");
           setData("main_photo_id", "");
-          setData("content", [{ description: "", photo_id: "" }]);
         }, 100);
       } catch (e) {
         console.error("Error sending data:", e);
@@ -45,14 +48,14 @@ export default function AddingLeadership({ editProps }: { editProps?: boolean })
 
   useEffect(() => {
     if (edit) return;
-    setData("content", [{ description: "", photo_id: "" }]);
+    //
   }, [edit]);
 
   useEffect(() => {
     setEdit(editProps || false);
   }, []);
 
-  console.log("data", data);
+  console.log("data?.content", data?.content);
 
   return (
     <div className="adding">

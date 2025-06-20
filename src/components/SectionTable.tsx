@@ -1,16 +1,15 @@
+import apiClient from "@/utils/apiClient";
 import Image from "next/image";
+import { redirect } from "next/navigation";
 import React from "react";
 
-interface itemChildrenNews {
+interface itemChildren {
   description: string;
   photo_id: string;
 }
 
 export interface Item {
-  main_title: string;
-  main_photo_id: string;
-  main_description: string;
-  content?: itemChildrenNews[];
+  [key: string]: string | number | Array<itemChildren>;
 }
 interface styles {
   [key: string]: string;
@@ -25,6 +24,8 @@ interface sectionTable {
   styleItem?: styles;
   Items: Item[] | undefined;
   headerTable: string[] | undefined;
+  editOptions?: { url: string; getUrl: string; setData: (item: Item) => void };
+  deleteOptions?: { url: string; get: () => Promise<void> };
 }
 
 export default function SectionTable({
@@ -32,7 +33,37 @@ export default function SectionTable({
   styleHeader,
   styleItem,
   headerTable,
+  editOptions,
+  deleteOptions,
 }: sectionTable) {
+  const deleteItem = async (
+    url: string,
+    get: () => Promise<void>,
+    id: string,
+  ) => {
+    try {
+      const res = apiClient.delete(`${url}?id=${id}`);
+      console.log("res deleted items", res);
+      setTimeout(() => get(), 100);
+    } catch (e) {
+      console.error(e);
+    }
+  };
+  const editItem = async (id: string, getUrl: string) => {
+    try {
+      const res = await apiClient(`${getUrl}?id=${id}`);
+      console.log("get item", res.data);
+      console.log("editOptions", editOptions);
+      editOptions?.setData({ ...res.data, _id: id });
+
+      if (editOptions?.url) {
+        console.log("redirect");
+        redirect(editOptions.url);
+      }
+    } catch (e) {
+      console.error(e);
+    }
+  };
   console.log("Items", Items);
 
   return (
@@ -52,8 +83,36 @@ export default function SectionTable({
                 height={100}
               />
               <div>
-                <h1>{item.main_title}</h1>
-                <p>{item.main_description}</p>
+                <h1>{item.main_title as string}</h1>
+                <p>{item.main_description as string}</p>
+              </div>
+              <div>
+                {editOptions?.url && (
+                  <button
+                    onClick={() => {
+                      editItem(
+                        item?._id as string,
+                        editOptions?.getUrl as string,
+                      );
+                      redirect(editOptions.url);
+                    }}
+                  >
+                    Изменить
+                  </button>
+                )}
+                {deleteOptions?.url && (
+                  <button
+                    onClick={() =>
+                      deleteItem(
+                        deleteOptions.url,
+                        deleteOptions.get,
+                        (item._id as string) || "",
+                      )
+                    }
+                  >
+                    Удалить
+                  </button>
+                )}
               </div>
             </div>
           ))}

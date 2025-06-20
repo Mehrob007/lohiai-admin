@@ -33,7 +33,6 @@ export default function AddingActs({ editProps }: { editProps?: boolean }) {
         setTimeout(() => {
           setData("main_title", "");
           setData("main_photo_id", "");
-          setData("content", [{ description: "", photo_id: "" }]);
         }, 100);
       } catch (e) {
         console.error("Error sending data:", e);
@@ -45,7 +44,6 @@ export default function AddingActs({ editProps }: { editProps?: boolean }) {
 
   useEffect(() => {
     if (edit) return;
-    setData("content", [{ description: "", photo_id: "" }]);
   }, [edit]);
 
   useEffect(() => {
