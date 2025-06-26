@@ -18,16 +18,18 @@ export default function AddingCadets({ editProps }: { editProps?: boolean }) {
     const isValid = validate({
       main_title: { required: true },
       main_photo_id: { required: true },
-      content: {
-        required: true,
-      },
     });
     if (isValid) {
       try {
         const res = await apiClient.post("/cadets/add", {
           main_title: data.main_title,
           main_photo_id: data.main_photo_id,
-          content: data.content,
+          content: data.content || [
+            {
+              description: "",
+              photo_id: "",
+            },
+          ],
         });
         console.log("res", res.data);
         setTimeout(() => {

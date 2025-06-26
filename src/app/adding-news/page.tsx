@@ -18,9 +18,6 @@ export default function AddingNews({ editProps }: { editProps?: boolean }) {
     const isValid = validate({
       main_title: { required: true },
       main_photo_id: { required: true },
-      content: {
-        required: true,
-      },
     });
     if (isValid) {
       try {

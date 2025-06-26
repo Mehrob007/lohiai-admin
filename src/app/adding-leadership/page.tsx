@@ -22,9 +22,6 @@ export default function AddingLeadership({
     const isValid = validate({
       main_title: { required: true },
       main_photo_id: { required: true },
-      content: {
-        required: true,
-      },
     });
     if (isValid) {
       try {
