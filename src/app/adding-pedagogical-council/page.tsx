@@ -25,12 +25,13 @@ export default function AddingPedagogicalCouncil({
     });
     if (isValid) {
       try {
-        const res = await apiClient.post("/pedagogical-council/add", data);
-        console.log("res", res.data);
-        setTimeout(() => {
-          setData("main_title", "");
-          setData("main_photo_id", "");
-        }, 100);
+        const res = await apiClient
+          .post("pedagogical-council/add", data)
+          .then(() => {
+            setData("main_title", "");
+            setData("main_photo_id", "");
+            setData("content", [{ description: "", photo_id: "" }]);
+          }, 100);
       } catch (e) {
         console.error("Error sending data:", e);
       }

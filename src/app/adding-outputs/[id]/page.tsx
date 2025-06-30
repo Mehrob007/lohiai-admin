@@ -4,19 +4,29 @@ import Input from "@/components/element-tags/Input";
 import Textarea from "@/components/element-tags/Textarea";
 import { useFormStore } from "@/hooks/useFormStore";
 import apiClient from "@/utils/apiClient";
+import { useParams } from "next/navigation";
 import React, { useEffect } from "react";
 interface contentItem {
   description: string;
   photo_id: string;
 }
 
-export default function AddingEducationalPlans({
-  editProps,
-}: {
-  editProps?: boolean;
-}) {
+export default function AddingOutputs() {
   const { data, errors, setData, validate } = useFormStore();
-  const [edit, setEdit] = React.useState(false);
+  const [edit] = React.useState({});
+  const { id } = useParams();
+
+  const getDataForEdit = async () => {
+    try {
+      const res = await apiClient("outputs/list?id=" + id);
+      setData("_id", id as string);
+      Object.entries(res.data).map(([key, value]) =>
+        setData(key, value as string),
+      );
+    } catch (e) {
+      console.error(e);
+    }
+  };
 
   const onSend = async () => {
     const isValid = validate({
@@ -25,13 +35,11 @@ export default function AddingEducationalPlans({
     });
     if (isValid) {
       try {
-        const res = await apiClient
-          .post("/educational-plans/add", data)
-          .then(() => {
-            setData("main_title", "");
-            setData("main_photo_id", "");
-            setData("content", [{ description: "", photo_id: "" }]);
-          }, 100);
+        await apiClient.post("outputs/add", data).then(() => {
+          setData("main_title", "");
+          setData("main_photo_id", "");
+          setData("content", [{ description: "", photo_id: "" }]);
+        });
       } catch (e) {
         console.error("Error sending data:", e);
       }
@@ -45,10 +53,10 @@ export default function AddingEducationalPlans({
   }, [edit]);
 
   useEffect(() => {
-    setEdit(editProps || false);
+    getDataForEdit();
   }, []);
 
-  console.log("data", data);
+  console.log("id", id);
 
   return (
     <div className="adding">
@@ -59,15 +67,6 @@ export default function AddingEducationalPlans({
             <button onClick={onSend}>Фиристодан</button>
           </div>
           <div className="adding-form">
-            {/* <input
-                type="text"
-                placeholder="Заголовок"
-                value={(data?.main_title as string) || ""}
-                onChange={(e) => setData("main_title", e.target.value)}
-              />
-              {errors.main_title && (
-                <span className="error">{errors.main_title}</span>
-              )} */}
             <Input
               required={true}
               title="Заголовок"
@@ -78,16 +77,6 @@ export default function AddingEducationalPlans({
               onChange={(e) => setData("main_title", e)}
               error={errors}
             />
-            {/* <input
-                type="file"
-                placeholder="ID фотографии"
-                // value={(data?.main_photo_id as string) || ""}
-                onChange={(e) => sendPhoto(e, "main_photo_id")}
-              />
-              {errors.main_photo_id && (
-                <span className="error">{errors.main_photo_id}</span>
-              )} */}
-
             <FilePhoto
               keyData="main_photo_id"
               id="main_photo_id_label"
@@ -100,7 +89,7 @@ export default function AddingEducationalPlans({
         </div>
         <div className="adding-form-content">
           {Array.isArray(data?.content) &&
-            data?.content?.map((item, index) => (
+            data?.content?.map((item, index, arr) => (
               <div key={index} className="adding-form-item">
                 <Textarea
                   title="Описание"
@@ -129,15 +118,29 @@ export default function AddingEducationalPlans({
                     }
                   /> */}
 
-                <FilePhoto
-                  keyData="content"
-                  id={`content-${index}`}
-                  index={index}
-                  childrenKey="photo_id"
-                  title="Аксро бор кардан"
-                  value={item?.photo_id as string}
-                  error={errors}
-                />
+                <div>
+                  <FilePhoto
+                    keyData="content"
+                    id={`content-${index}`}
+                    index={index}
+                    childrenKey="photo_id"
+                    title="Аксро бор кардан"
+                    value={item?.photo_id as string}
+                    error={errors}
+                  />
+                  {index !== 0 && (
+                    <button
+                      onClick={() => {
+                        setData(
+                          "content",
+                          arr.filter((_, i) => i !== index),
+                        );
+                      }}
+                    >
+                      -
+                    </button>
+                  )}
+                </div>
               </div>
             ))}
 

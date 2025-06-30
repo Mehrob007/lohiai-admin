@@ -25,12 +25,13 @@ export default function AddingCollegeStructure({
     });
     if (isValid) {
       try {
-        const res = await apiClient.post("/college-structure/add", data);
-        console.log("res", res.data);
-        setTimeout(() => {
-          setData("main_title", "");
-          setData("main_photo_id", "");
-        }, 100);
+        const res = await apiClient
+          .post("/college-structure/add", data)
+          .then(() => {
+            setData("main_title", "");
+            setData("main_photo_id", "");
+            setData("content", [{ description: "", photo_id: "" }]);
+          }, 100);
       } catch (e) {
         console.error("Error sending data:", e);
       }

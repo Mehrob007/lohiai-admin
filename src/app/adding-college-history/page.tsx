@@ -25,12 +25,11 @@ export default function AddingLeadership({
     });
     if (isValid) {
       try {
-        const res = await apiClient.post("/college-history/add", data);
-        console.log("res", res.data);
-        setTimeout(() => {
+        await apiClient.post("/college-history/add", data).then(() => {
           setData("main_title", "");
           setData("main_photo_id", "");
-        }, 100);
+          setData("content", [{ description: "", photo_id: "" }]);
+        });
       } catch (e) {
         console.error("Error sending data:", e);
       }
