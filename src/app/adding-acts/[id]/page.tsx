@@ -40,11 +40,6 @@ export default function AddingActs() {
           setData("main_photo_id", "");
           setData("content", [{ description: "", photo_id: "" }]);
         });
-        // console.log("res", res.data);
-        // setTimeout(() => {
-        //   setData("main_title", "");
-        //   setData("main_photo_id", "");
-        // }, 100);
       } catch (e) {
         console.error("Error sending data:", e);
       }
