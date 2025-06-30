@@ -55,7 +55,7 @@ export default function AddingEducationalPlans({
         <div className="main-form">
           <div className="adding-header">
             <h1>Добавление</h1>
-            <button onClick={onSend}>Добавить</button>
+            <button onClick={onSend}>Фиристодан</button>
           </div>
           <div className="adding-form">
             {/* <input

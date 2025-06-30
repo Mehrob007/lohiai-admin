@@ -21,12 +21,10 @@ export default function AddingActs({ editProps }: { editProps?: boolean }) {
     });
     if (isValid) {
       try {
-        await apiClient
-          .post("/acts/add", data)
-          .then(() => {
-            setData("main_title", "");
-            setData("main_photo_id", "");
-          });
+        await apiClient.post("/acts/add", data).then(() => {
+          setData("main_title", "");
+          setData("main_photo_id", "");
+        });
         // console.log("res", res.data);
         // setTimeout(() => {
         //   setData("main_title", "");
@@ -56,7 +54,7 @@ export default function AddingActs({ editProps }: { editProps?: boolean }) {
         <div className="main-form">
           <div className="adding-header">
             <h1>Добавление</h1>
-            <button onClick={onSend}>Добавить</button>
+            <button onClick={onSend}>Фиристодан</button>
           </div>
           <div className="adding-form">
             {/* <input
