@@ -54,7 +54,7 @@ export default function AddingPedagogicalCouncil({
       <div className="adding-content">
         <div className="main-form">
           <div className="adding-header">
-            <h1>Добавление</h1>
+            <h1>Илова</h1>
             <button onClick={onSend}>Фиристодан</button>
           </div>
           <div className="adding-form">

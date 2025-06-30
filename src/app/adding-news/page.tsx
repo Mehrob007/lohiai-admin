@@ -50,7 +50,7 @@ export default function AddingNews({ editProps }: { editProps?: boolean }) {
       <div className="adding-content">
         <div className="main-form">
           <div className="adding-header">
-            <h1>Добавление новости</h1>
+            <h1>Илова новости</h1>
             <button onClick={onSend}>Фиристодан</button>
           </div>
           <div className="adding-form">
