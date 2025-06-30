@@ -31,7 +31,6 @@ export default function FilePhoto({
   childrenKey,
   keyData,
 }: FilePhotoProps) {
-
   const { setData, data } = useFormStore();
 
   const sendPhoto = async (
@@ -96,7 +95,7 @@ export default function FilePhoto({
   return (
     <div
       className={`file-photo ${className}`}
-      style={{ width: width || "100%" }}
+      style={{ width: width || "auto" }}
     >
       <label
         htmlFor={id}
@@ -118,7 +117,7 @@ export default function FilePhoto({
           }
         }}
       >
-        {!value ? title : "Удалить фото"}
+        {!value ? title : "Нест кардан"}
       </label>
       <input
         type="file"

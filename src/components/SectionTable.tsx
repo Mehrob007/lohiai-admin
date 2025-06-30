@@ -49,19 +49,12 @@ export default function SectionTable({
       console.error(e);
     }
   };
-  const editItem = async (id: string, getUrl: string) => {
-    try {
-      const res = await apiClient(`${getUrl}?id=${id}`);
-      console.log("get item", res.data);
-      console.log("editOptions", editOptions);
-      editOptions?.setData({ ...res.data, _id: id });
-
-      if (editOptions?.url) {
-        console.log("redirect");
-        redirect(editOptions.url);
-      }
-    } catch (e) {
-      console.error(e);
+  const editItem = (
+    id: string,
+    // getUrl: string
+  ) => {
+    if (editOptions?.url) {
+      redirect(`${editOptions.url}/${id}`);
     }
   };
   console.log("Items", Items);
@@ -92,12 +85,12 @@ export default function SectionTable({
                     onClick={() => {
                       editItem(
                         item?._id as string,
-                        editOptions?.getUrl as string,
+                        // editOptions?.getUrl as string,
                       );
                       redirect(editOptions.url);
                     }}
                   >
-                    Изменить
+                    Тағйир
                   </button>
                 )}
                 {deleteOptions?.url && (
@@ -110,7 +103,7 @@ export default function SectionTable({
                       )
                     }
                   >
-                    Удалить
+                    Нест кардан
                   </button>
                 )}
               </div>

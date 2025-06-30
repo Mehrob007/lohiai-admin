@@ -52,7 +52,7 @@ export default function CollegeStructure() {
               }}
               deleteOptions={{ url: "college-structure/delete", get: getData }}
               Items={data}
-              headerTable={["", "title"]}
+              headerTable={["", "Сарлавҳа"]}
               styleHeader={{ gridTemplateColumns: "100px 200px" }}
               styleItem={{ gridTemplateColumns: "100px 1fr 200px" }}
             />

@@ -4,19 +4,29 @@ import Input from "@/components/element-tags/Input";
 import Textarea from "@/components/element-tags/Textarea";
 import { useFormStore } from "@/hooks/useFormStore";
 import apiClient from "@/utils/apiClient";
+import { useParams } from "next/navigation";
 import React, { useEffect } from "react";
 interface contentItem {
   description: string;
   photo_id: string;
 }
 
-export default function AddingCollegeStructure({
-  editProps,
-}: {
-  editProps?: boolean;
-}) {
+export default function AddingActs() {
   const { data, errors, setData, validate } = useFormStore();
-  const [edit, setEdit] = React.useState(false);
+  const [edit] = React.useState({});
+  const { id } = useParams();
+
+  const getDataForEdit = async () => {
+    try {
+      const res = await apiClient("acts/list?id=" + id);
+      setData("_id", id as string);
+      Object.entries(res.data).map(([key, value]) =>
+        setData(key, value as string),
+      );
+    } catch (e) {
+      console.error(e);
+    }
+  };
 
   const onSend = async () => {
     const isValid = validate({
@@ -25,12 +35,16 @@ export default function AddingCollegeStructure({
     });
     if (isValid) {
       try {
-        const res = await apiClient.post("/college-structure/add", data);
-        console.log("res", res.data);
-        setTimeout(() => {
+        await apiClient.post("/acts/add", data).then(() => {
           setData("main_title", "");
           setData("main_photo_id", "");
-        }, 100);
+          setData("content", [{ description: "", photo_id: "" }]);
+        });
+        // console.log("res", res.data);
+        // setTimeout(() => {
+        //   setData("main_title", "");
+        //   setData("main_photo_id", "");
+        // }, 100);
       } catch (e) {
         console.error("Error sending data:", e);
       }
@@ -44,10 +58,10 @@ export default function AddingCollegeStructure({
   }, [edit]);
 
   useEffect(() => {
-    setEdit(editProps || false);
+    getDataForEdit();
   }, []);
 
-  console.log("data", data);
+  console.log("id", id);
 
   return (
     <div className="adding">
@@ -99,7 +113,7 @@ export default function AddingCollegeStructure({
         </div>
         <div className="adding-form-content">
           {Array.isArray(data?.content) &&
-            data?.content?.map((item, index) => (
+            data?.content?.map((item, index, arr) => (
               <div key={index} className="adding-form-item">
                 <Textarea
                   title="Описание"
@@ -128,15 +142,29 @@ export default function AddingCollegeStructure({
                     }
                   /> */}
 
-                <FilePhoto
-                  keyData="content"
-                  id={`content-${index}`}
-                  index={index}
-                  childrenKey="photo_id"
-                  title="Аксро бор кардан"
-                  value={item?.photo_id as string}
-                  error={errors}
-                />
+                <div>
+                  <FilePhoto
+                    keyData="content"
+                    id={`content-${index}`}
+                    index={index}
+                    childrenKey="photo_id"
+                    title="Аксро бор кардан"
+                    value={item?.photo_id as string}
+                    error={errors}
+                  />
+                  {index !== 0 && (
+                    <button
+                      onClick={() => {
+                        setData(
+                          "content",
+                          arr.filter((_, i) => i !== index),
+                        );
+                      }}
+                    >
+                      -
+                    </button>
+                  )}
+                </div>
               </div>
             ))}
 

@@ -55,7 +55,7 @@ export default function PedagogicalCouncil() {
                 get: getData,
               }}
               Items={data}
-              headerTable={["", "title"]}
+              headerTable={["", "Сарлавҳа"]}
               styleHeader={{ gridTemplateColumns: "100px 200px" }}
               styleItem={{ gridTemplateColumns: "100px 1fr 200px" }}
             />

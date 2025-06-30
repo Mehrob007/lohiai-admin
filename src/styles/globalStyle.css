@@ -258,4 +258,17 @@ button > a {
 }
 .adding > .adding-content > .adding-form-content > .adding-form-item {
   margin: 20px 0;
+}
+.adding > .adding-content > .adding-form-content > .adding-form-item > div {
+  display: grid;
+  grid-template-columns: 1fr 50px;
+}
+.adding > .adding-content > .adding-form-content > .adding-form-item > div > button {
+  cursor: pointer;
+  border-radius: 20px;
+  height: 26px;
+  margin: 10px 0;
+  width: 50px;
+  color: red;
+  font-weight: 900;
 }/*# sourceMappingURL=globalStyle.css.map */

@@ -279,6 +279,19 @@ button {
     & > .adding-form-content {
       & > .adding-form-item {
         margin: 20px 0;
+        & > div{
+          display: grid;
+          grid-template-columns: 1fr 50px;
+          & > button{
+            cursor: pointer;
+            border-radius: 20px;
+            height: 26px;
+            margin: 10px 0;
+            width: 50px;
+            color: red;
+            font-weight: 900;
+          }
+        }
       }
     }
   }

@@ -24,6 +24,7 @@ export default function AddingActs({ editProps }: { editProps?: boolean }) {
         await apiClient.post("/acts/add", data).then(() => {
           setData("main_title", "");
           setData("main_photo_id", "");
+          setData("content", [{ description: "", photo_id: "" }]);
         });
         // console.log("res", res.data);
         // setTimeout(() => {
@@ -45,8 +46,6 @@ export default function AddingActs({ editProps }: { editProps?: boolean }) {
   useEffect(() => {
     setEdit(editProps || false);
   }, []);
-
-  console.log("data", data);
 
   return (
     <div className="adding">
@@ -89,7 +88,7 @@ export default function AddingActs({ editProps }: { editProps?: boolean }) {
             <FilePhoto
               keyData="main_photo_id"
               id="main_photo_id_label"
-              title="Загрузить фото"
+              title="Аксро бор кардан"
               value={data?.main_photo_id as string}
               error={errors}
               // width={200}
@@ -132,7 +131,7 @@ export default function AddingActs({ editProps }: { editProps?: boolean }) {
                   id={`content-${index}`}
                   index={index}
                   childrenKey="photo_id"
-                  title="Загрузить фото"
+                  title="Аксро бор кардан"
                   value={item?.photo_id as string}
                   error={errors}
                 />
@@ -148,7 +147,7 @@ export default function AddingActs({ editProps }: { editProps?: boolean }) {
               setData("content", updatedContent);
             }}
           >
-            Добавить элемент
+            Иловаи элемент
           </button>
         </div>
       </div>

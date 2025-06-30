@@ -90,7 +90,7 @@ export default function AddingPedagogicalCouncil({
             <FilePhoto
               keyData="main_photo_id"
               id="main_photo_id_label"
-              title="Загрузить фото"
+              title="Аксро бор кардан"
               value={data?.main_photo_id as string}
               error={errors}
               // width={200}
@@ -133,7 +133,7 @@ export default function AddingPedagogicalCouncil({
                   id={`content-${index}`}
                   index={index}
                   childrenKey="photo_id"
-                  title="Загрузить фото"
+                  title="Аксро бор кардан"
                   value={item?.photo_id as string}
                   error={errors}
                 />
@@ -149,7 +149,7 @@ export default function AddingPedagogicalCouncil({
               setData("content", updatedContent);
             }}
           >
-            Добавить элемент
+            Иловаи элемент
           </button>
         </div>
       </div>

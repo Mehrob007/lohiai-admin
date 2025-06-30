@@ -32,7 +32,7 @@ export default function Conteiner({ children }: conteiner) {
                 : headerContent.addPath
             }
           >
-            {pathName.split("-")[0] === "/adding" ? "Назад" : "Добавить"}
+            {pathName.split("-")[0] === "/adding" ? "Назад" : "Илова"}
           </Link>
         </button>
       </div>
