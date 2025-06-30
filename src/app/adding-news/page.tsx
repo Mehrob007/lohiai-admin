@@ -10,9 +10,8 @@ interface contentItem {
   photo_id: string;
 }
 
-export default function AddingNews({ editProps }: { editProps?: boolean }) {
+export default function AddingNews() {
   const { data, errors, setData, validate } = useFormStore();
-  const [edit, setEdit] = React.useState(false);
 
   const onSend = async () => {
     const isValid = validate({
@@ -21,10 +20,11 @@ export default function AddingNews({ editProps }: { editProps?: boolean }) {
     });
     if (isValid) {
       try {
-        const res = await apiClient.post("news/add", data).then(() => {
+        await apiClient.post("news/add", data).then(() => {
           setData("main_title", "");
           setData("main_photo_id", "");
           setData("content", [{ description: "", photo_id: "" }]);
+        });
       } catch (e) {
         console.error("Error sending data:", e);
       }
@@ -34,11 +34,7 @@ export default function AddingNews({ editProps }: { editProps?: boolean }) {
   };
 
   useEffect(() => {
-    if (edit) return;
-  }, [edit]);
-
-  useEffect(() => {
-    setEdit(editProps || false);
+    setData("content", [{ description: "", photo_id: "" }]);
   }, []);
 
   console.log("data", data);
@@ -93,7 +89,7 @@ export default function AddingNews({ editProps }: { editProps?: boolean }) {
         </div>
         <div className="adding-form-content">
           {Array.isArray(data?.content) &&
-            data?.content?.map((item, index) => (
+            data?.content?.map((item, index, arr) => (
               <div key={index} className="adding-form-item">
                 <Textarea
                   title="Описание"
@@ -114,23 +110,29 @@ export default function AddingNews({ editProps }: { editProps?: boolean }) {
                     }
                   }}
                 />
-                {/* <input
-                    type="file"
-                    placeholder="ID фотографии"
-                    onChange={(e) =>
-                      sendPhotoChildren(e, `content`, index, "photo_id")
-                    }
-                  /> */}
-
-                <FilePhoto
-                  keyData="content"
-                  id={`content-${index}`}
-                  index={index}
-                  childrenKey="photo_id"
-                  title="Аксро бор кардан"
-                  value={item?.photo_id as string}
-                  error={errors}
-                />
+                <div>
+                  <FilePhoto
+                    keyData="content"
+                    id={`content-${index}`}
+                    index={index}
+                    childrenKey="photo_id"
+                    title="Аксро бор кардан"
+                    value={item?.photo_id as string}
+                    error={errors}
+                  />
+                  {index !== 0 && (
+                    <button
+                      onClick={() => {
+                        setData(
+                          "content",
+                          arr.filter((_, i) => i !== index),
+                        );
+                      }}
+                    >
+                      -
+                    </button>
+                  )}
+                </div>
               </div>
             ))}
 

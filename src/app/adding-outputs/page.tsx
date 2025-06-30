@@ -21,10 +21,11 @@ export default function AddingOutputs({ editProps }: { editProps?: boolean }) {
     });
     if (isValid) {
       try {
-        const res = await apiClient.post("/outputs/add", data).then(() => {
+        await apiClient.post("/outputs/add", data).then(() => {
           setData("main_title", "");
           setData("main_photo_id", "");
           setData("content", [{ description: "", photo_id: "" }]);
+        });
       } catch (e) {
         console.error("Error sending data:", e);
       }
