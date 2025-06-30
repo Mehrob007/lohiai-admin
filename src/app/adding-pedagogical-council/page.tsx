@@ -25,11 +25,7 @@ export default function AddingPedagogicalCouncil({
     });
     if (isValid) {
       try {
-        const res = await apiClient.post("/pedagogical-council/add", {
-          main_title: data.main_title,
-          main_photo_id: data.main_photo_id,
-          content: data.content,
-        });
+        const res = await apiClient.post("/pedagogical-council/add", data);
         console.log("res", res.data);
         setTimeout(() => {
           setData("main_title", "");

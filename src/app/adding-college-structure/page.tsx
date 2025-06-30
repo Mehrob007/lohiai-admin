@@ -25,11 +25,7 @@ export default function AddingCollegeStructure({
     });
     if (isValid) {
       try {
-        const res = await apiClient.post("/college-structure/add", {
-          main_title: data.main_title,
-          main_photo_id: data.main_photo_id,
-          content: data.content,
-        });
+        const res = await apiClient.post("/college-structure/add", data);
         console.log("res", res.data);
         setTimeout(() => {
           setData("main_title", "");

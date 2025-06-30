@@ -25,11 +25,7 @@ export default function AddingLeadership({
     });
     if (isValid) {
       try {
-        const res = await apiClient.post("/college-history/add", {
-          main_title: data.main_title,
-          main_photo_id: data.main_photo_id,
-          content: data.content,
-        });
+        const res = await apiClient.post("/college-history/add", data);
         console.log("res", res.data);
         setTimeout(() => {
           setData("main_title", "");

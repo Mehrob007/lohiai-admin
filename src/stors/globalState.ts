@@ -15,16 +15,17 @@ interface GlobalState {
 const LOCAL_STORAGE_KEY = "headerContent";
 
 const getInitialHeaderContent = (): HeaderContent => {
-  const stored = localStorage.getItem(LOCAL_STORAGE_KEY);
-  if (stored) {
+  if (typeof window !== "undefined") {
     try {
-      return JSON.parse(stored);
+      const stored = localStorage.getItem(LOCAL_STORAGE_KEY);
+      return stored ? JSON.parse(stored) : { backPath: "", addPath: "", title: "" };
     } catch {
       return { backPath: "", addPath: "", title: "" };
     }
   }
-  return { backPath: "", addPath: "", title: "" };
+  return { backPath: "", addPath: "", title: "" }; // SSR fallback
 };
+
 
 export const useGlobalState = create<GlobalState>((set) => ({
   headerContent: getInitialHeaderContent(),

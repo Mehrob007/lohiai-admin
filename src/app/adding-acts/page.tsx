@@ -21,16 +21,17 @@ export default function AddingActs({ editProps }: { editProps?: boolean }) {
     });
     if (isValid) {
       try {
-        const res = await apiClient.post("/acts/add", {
-          main_title: data.main_title,
-          main_photo_id: data.main_photo_id,
-          content: data.content,
-        });
-        console.log("res", res.data);
-        setTimeout(() => {
-          setData("main_title", "");
-          setData("main_photo_id", "");
-        }, 100);
+        await apiClient
+          .post("/acts/add", data)
+          .then(() => {
+            setData("main_title", "");
+            setData("main_photo_id", "");
+          });
+        // console.log("res", res.data);
+        // setTimeout(() => {
+        //   setData("main_title", "");
+        //   setData("main_photo_id", "");
+        // }, 100);
       } catch (e) {
         console.error("Error sending data:", e);
       }

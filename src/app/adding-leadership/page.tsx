@@ -25,11 +25,7 @@ export default function AddingLeadership({
     });
     if (isValid) {
       try {
-        const res = await apiClient.post("/leadership/add", {
-          main_title: data.main_title,
-          main_photo_id: data.main_photo_id,
-          content: data.content,
-        });
+        const res = await apiClient.post("/leadership/add", data);
         console.log("res", res.data);
         setTimeout(() => {
           setData("main_title", "");
@@ -52,7 +48,7 @@ export default function AddingLeadership({
     setEdit(editProps || false);
   }, []);
 
-  console.log("data?.content", data?.content);
+  console.log("data", data);
 
   return (
     <div className="adding">
