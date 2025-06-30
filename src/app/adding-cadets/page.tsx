@@ -4,7 +4,7 @@ import Input from "@/components/element-tags/Input";
 import Textarea from "@/components/element-tags/Textarea";
 import { useFormStore } from "@/hooks/useFormStore";
 import apiClient from "@/utils/apiClient";
-import React from "react";
+import React, { useEffect } from "react";
 interface contentItem {
   description: string;
   photo_id: string;
@@ -33,6 +33,9 @@ export default function AddingCadets() {
     }
   };
 
+  useEffect(() => {
+    setData("content", [{ description: "", photo_id: "" }]);
+  }, [])
 
   console.log("data", data);
 
