@@ -10,13 +10,10 @@ interface contentItem {
   photo_id: string;
 }
 
-export default function AddingPedagogicalCouncil({
-  editProps,
-}: {
-  editProps?: boolean;
-}) {
+export default function AddingPedagogicalCouncil() {
   const { data, errors, setData, validate } = useFormStore();
   const [edit, setEdit] = React.useState(false);
+  const editProps: boolean = false;
 
   const onSend = async () => {
     const isValid = validate({
@@ -25,13 +22,11 @@ export default function AddingPedagogicalCouncil({
     });
     if (isValid) {
       try {
-        const res = await apiClient
-          .post("pedagogical-council/add", data)
-          .then(() => {
-            setData("main_title", "");
-            setData("main_photo_id", "");
-            setData("content", [{ description: "", photo_id: "" }]);
-          }, 100);
+        await apiClient.post("pedagogical-council/add", data).then(() => {
+          setData("main_title", "");
+          setData("main_photo_id", "");
+          setData("content", [{ description: "", photo_id: "" }]);
+        });
       } catch (e) {
         console.error("Error sending data:", e);
       }
@@ -111,7 +106,7 @@ export default function AddingPedagogicalCouncil({
                   required={true}
                   onChange={(e) => {
                     const updatedContent: contentItem[] = Array.isArray(
-                      data.content,
+                      data.content
                     )
                       ? [...data.content]
                       : [];

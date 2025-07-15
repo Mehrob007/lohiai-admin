@@ -10,9 +10,10 @@ interface contentItem {
   photo_id: string;
 }
 
-export default function AddingOutputs({ editProps }: { editProps?: boolean }) {
+export default function AddingOutputs() {
   const { data, errors, setData, validate } = useFormStore();
   const [edit, setEdit] = React.useState(false);
+  const editProps: boolean = false;
 
   const onSend = async () => {
     const isValid = validate({
@@ -105,7 +106,7 @@ export default function AddingOutputs({ editProps }: { editProps?: boolean }) {
                   required={true}
                   onChange={(e) => {
                     const updatedContent: contentItem[] = Array.isArray(
-                      data.content,
+                      data.content
                     )
                       ? [...data.content]
                       : [];
