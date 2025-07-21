@@ -70,7 +70,7 @@ export default function SectionTable({
           Items?.map((item, i) => (
             <div key={i} style={styleItem}>
               <img
-                src={`${process.env.NEXT_PUBLIC_API_URL}/files/${item.main_photo_id}`}
+                src={`${process.env.NEXT_PUBLIC_API_URL}files/${item.main_photo_id}`}
                 alt="img"
                 width={100}
                 height={100}

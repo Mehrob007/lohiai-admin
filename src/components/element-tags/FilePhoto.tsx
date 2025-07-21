@@ -136,7 +136,7 @@ export default function FilePhoto({
         <img
           src={
             typeof value === "string"
-              ? process.env.NEXT_PUBLIC_API_URL + "/files/" + value
+              ? process.env.NEXT_PUBLIC_API_URL + "files/" + value
               : value
           }
           alt={id}
