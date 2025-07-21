@@ -82,7 +82,7 @@ export default function AddingOutputs() {
                   required={true}
                   onChange={(e) => {
                     const updatedContent: contentItem[] = Array.isArray(
-                      data.content,
+                      data.content
                     )
                       ? [...data.content]
                       : [];

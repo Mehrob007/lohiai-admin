@@ -20,7 +20,7 @@ export default function AddingPedagogicalCouncil() {
     });
     if (isValid) {
       try {
-        apiClient.post("pedagogical-council/add", data).then(() => {
+        await apiClient.post("pedagogical-council/add", data).then(() => {
           setData("main_title", "");
           setData("main_photo_id", "");
           setData("content", [{ description: "", photo_id: "" }]);
@@ -82,7 +82,7 @@ export default function AddingPedagogicalCouncil() {
                   required={true}
                   onChange={(e) => {
                     const updatedContent: contentItem[] = Array.isArray(
-                      data.content,
+                      data.content
                     )
                       ? [...data.content]
                       : [];
