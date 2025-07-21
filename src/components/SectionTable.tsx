@@ -1,5 +1,5 @@
 import apiClient from "@/utils/apiClient";
-import Image from "next/image";
+// import Image from "next/image";
 import { redirect } from "next/navigation";
 import React from "react";
 
@@ -69,8 +69,8 @@ export default function SectionTable({
         {Array.isArray(Items) &&
           Items?.map((item, i) => (
             <div key={i} style={styleItem}>
-              <Image
-                src={`${process.env.NEXT_PUBLIC_API_URL}files/${item.main_photo_id}`}
+              <img
+                src={`${process.env.NEXT_PUBLIC_API_URL}/files/${item.main_photo_id}`}
                 alt="img"
                 width={100}
                 height={100}

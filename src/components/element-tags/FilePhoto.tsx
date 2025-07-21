@@ -1,6 +1,6 @@
 import { useFormStore } from "@/hooks/useFormStore";
 import apiClient from "@/utils/apiClient";
-import Image from "next/image";
+// import Image from "next/image";
 import React from "react";
 
 interface FilePhotoProps {
@@ -133,10 +133,10 @@ export default function FilePhoto({
         }}
       />
       {value && (
-        <Image
+        <img
           src={
             typeof value === "string"
-              ? process.env.NEXT_PUBLIC_API_URL + "files/" + value
+              ? process.env.NEXT_PUBLIC_API_URL + "/files/" + value
               : value
           }
           alt={id}

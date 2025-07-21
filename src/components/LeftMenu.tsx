@@ -51,6 +51,11 @@ export default function LeftMenu() {
   const pathName = usePathname();
   const { setHeaderContent } = useGlobalState((state) => state);
 
+  const quit = () => {
+    localStorage.removeItem("token")
+    document.location.href = "/login"
+  }
+
   return (
     <div className="left-menu">
       <ul className="nav-bar">
@@ -73,6 +78,9 @@ export default function LeftMenu() {
           );
         })}
       </ul>
+      <button
+      onClick={quit}
+      >Баромадан</button>
     </div>
   );
 }

@@ -46,6 +46,7 @@ export default function Login() {
             id="login-input-password"
             value={(data?.password as string) || ""}
             error={errors}
+            type="password"
             onChange={(e) => setData("password", e)}
             placeholder="password"
           />
