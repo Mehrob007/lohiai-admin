@@ -9,36 +9,32 @@ const menu = [
     title: "Хабар",
     href: ["/", "/adding-news"],
   },
-  // {
-  //   title: "Дар бораи Академия",
-  //   href: ["/academy", "/adding-academy"],
-  // },
   {
-    title: "Рохбарият",
+    title: "Роҳбарият",
     href: ["/leadership", "/adding-leadership"],
   },
   {
-    title: "Таърихи Коллечи милитсия",
+    title: "Таърихи Коллеҷи милитсия",
     href: ["/college-history", "/adding-college-history"],
   },
   {
-    title: "Сохтори Коллеч",
+    title: "Сохтори Коллеҷ",
     href: ["/college-structure", "/adding-college-structure"],
   },
   {
-    title: "Курссанти бехтари",
+    title: "Курсанти беҳтарин",
     href: ["/cadets", "/adding-cadets"],
   },
   {
-    title: "Баромадхо",
+    title: "Баромадҳо",
     href: ["/outputs", "/adding-outputs"],
   },
   {
-    title: "Наќшахои таълими ва нашрияхо",
+    title: "Нақшаҳои таълимӣ ва нашрияҳо",
     href: ["/educational-plans", "/adding-educational-plans"],
   },
   {
-    title: "Шурои илми-педагоги",
+    title: "Шӯрои илмию педагогӣ",
     href: ["/pedagogical-council", "/adding-pedagogical-council"],
   },
   {
@@ -52,9 +48,9 @@ export default function LeftMenu() {
   const { setHeaderContent } = useGlobalState((state) => state);
 
   const quit = () => {
-    localStorage.removeItem("token")
-    document.location.href = "/login"
-  }
+    localStorage.removeItem("token");
+    document.location.href = "/login";
+  };
 
   return (
     <div className="left-menu">
@@ -78,9 +74,7 @@ export default function LeftMenu() {
           );
         })}
       </ul>
-      <button
-      onClick={quit}
-      >Баромадан</button>
+      <button onClick={quit}>Баромадан</button>
     </div>
   );
 }

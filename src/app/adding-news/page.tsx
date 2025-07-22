@@ -44,13 +44,13 @@ export default function AddingNews() {
       <div className="adding-content">
         <div className="main-form">
           <div className="adding-header">
-            <h1>Илова новости</h1>
+            <h1>Илова </h1>
             <button onClick={onSend}>Фиристодан</button>
           </div>
           <div className="adding-form">
             {/* <input
                 type="text"
-                placeholder="Заголовок"
+                placeholder=" Сарлавҳа"
                 value={(data?.main_title as string) || ""}
                 onChange={(e) => setData("main_title", e.target.value)}
               />
@@ -59,9 +59,9 @@ export default function AddingNews() {
               )} */}
             <Input
               required={true}
-              title="Заголовок"
+              title=" Сарлавҳа"
               type="text"
-              placeholder="Заголовок"
+              placeholder=" Сарлавҳа"
               id="main_title"
               value={(data?.main_title as string) || ""}
               onChange={(e) => setData("main_title", e)}
@@ -92,15 +92,15 @@ export default function AddingNews() {
             data?.content?.map((item, index, arr) => (
               <div key={index} className="adding-form-item">
                 <Textarea
-                  title="Описание"
+                  title="Тавсиф"
                   id="description"
-                  placeholder="Описание"
+                  placeholder="Тавсиф"
                   value={item.description}
                   error={errors}
                   required={true}
                   onChange={(e) => {
                     const updatedContent: contentItem[] = Array.isArray(
-                      data.content,
+                      data.content
                     )
                       ? [...data.content]
                       : [];
@@ -125,7 +125,7 @@ export default function AddingNews() {
                       onClick={() => {
                         setData(
                           "content",
-                          arr.filter((_, i) => i !== index),
+                          arr.filter((_, i) => i !== index)
                         );
                       }}
                     >
@@ -145,7 +145,7 @@ export default function AddingNews() {
               setData("content", updatedContent);
             }}
           >
-            Иловаи элемент
+            Илова кардани унсур
           </button>
         </div>
       </div>

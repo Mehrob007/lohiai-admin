@@ -47,9 +47,9 @@ export default function AddingEducationalPlans() {
           <div className="adding-form">
             <Input
               required={true}
-              title="Заголовок"
+              title=" Сарлавҳа"
               type="text"
-              placeholder="Заголовок"
+              placeholder=" Сарлавҳа"
               id="main_title"
               value={(data?.main_title as string) || ""}
               onChange={(e) => setData("main_title", e)}
@@ -71,15 +71,15 @@ export default function AddingEducationalPlans() {
             data?.content?.map((item, index, arr) => (
               <div key={index} className="adding-form-item">
                 <Textarea
-                  title="Описание"
+                  title="Тавсиф"
                   id="description"
-                  placeholder="Описание"
+                  placeholder="Тавсиф"
                   value={item.description}
                   error={errors}
                   required={true}
                   onChange={(e) => {
                     const updatedContent: contentItem[] = Array.isArray(
-                      data.content,
+                      data.content
                     )
                       ? [...data.content]
                       : [];
@@ -104,7 +104,7 @@ export default function AddingEducationalPlans() {
                       onClick={() => {
                         setData(
                           "content",
-                          arr.filter((_, i) => i !== index),
+                          arr.filter((_, i) => i !== index)
                         );
                       }}
                     >
@@ -124,7 +124,7 @@ export default function AddingEducationalPlans() {
               setData("content", updatedContent);
             }}
           >
-            Иловаи элемент
+            Илова кардани унсур
           </button>
         </div>
       </div>

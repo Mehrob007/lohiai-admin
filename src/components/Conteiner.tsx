@@ -12,13 +12,8 @@ export default function Conteiner({ children }: conteiner) {
   const pathName = usePathname();
   const { setClear } = useFormStore();
   const { headerContent } = useGlobalState((state) => state);
-  console.log(
-    "pathName",
-    pathName.split("-")[0] === "/adding"
-      ? headerContent.backPath
-      : headerContent.addPath,
-  );
 
+  
   return (
     <div className="components">
       <div className="components-header">
