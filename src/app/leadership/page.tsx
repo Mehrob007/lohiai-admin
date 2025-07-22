@@ -19,11 +19,11 @@ export default function Leadership() {
   const { getItems } = useFunctions();
   const { setDataMony } = useFormStore();
 
-  // useEffect(() => {
-  //   const token = localStorage.getItem("token");
-  //   if (token) {
-  //   } else router.replace("/login");
-  // }, [router]);
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+    } else router.replace("/login");
+  }, [router]);
   const getData = async () => {
     const res = await getItems("leadership/list");
     if (res) {

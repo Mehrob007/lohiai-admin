@@ -19,11 +19,11 @@ export default function News() {
   const { getItems } = useFunctions();
   const { setDataMony } = useFormStore();
 
-  // useEffect(() => {
-  //   const token = localStorage.getItem("token");
-  //   if (token) {
-  //   } else router.replace("/login");
-  // }, [router]);
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+    } else router.replace("/login");
+  }, [router]);
   const getData = async (): Promise<void> => {
     const res = await getItems("news/list");
     if (res) {

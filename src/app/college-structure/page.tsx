@@ -19,11 +19,11 @@ export default function CollegeStructure() {
   const [data, setData] = useState<itemGetNews[] | null>();
   const { getItems } = useFunctions();
 
-  // useEffect(() => {
-  //   const token = localStorage.getItem("token");
-  //   if (token) {
-  //   } else router.replace("/login");
-  // }, [router]);
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+    } else router.replace("/login");
+  }, [router]);
   const getData = async () => {
     const res = await getItems("college-structure/list");
     if (res) {
