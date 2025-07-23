@@ -1,8 +1,8 @@
 button {
   font-weight: 600;
   font-size: 14px;
-  // padding: 10px 5px; 
-  height: 40px; 
+  // padding: 10px 5px;
+  height: 40px;
   // width: 100px;
   & > a {
     padding: 10px;
@@ -11,6 +11,37 @@ button {
     text-decoration: none;
     color: #333;
   }
+}
+
+.editor-container {
+  border: 3px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  // margin-left: 20px;
+}
+.toolbar {
+  margin-bottom: 10px;
+}
+.toolbar button {
+  margin-right: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.editable-area {
+  min-height: 100px;
+  padding: 10px;
+  border: 3px solid #eee;
+  outline: none;
+  color: white;
+}
+.editable-area b {
+  font-weight: 600;
+}
+.editable-area i {
+  font-style: italic;
+}
+.editable-area:focus {
+  border-color: #007bff;
 }
 
 .input {
@@ -57,6 +88,7 @@ button {
     display: none;
   }
   & > img {
+    max-width: 400px;
     width: auto;
     height: auto;
     // border-radius: 50%;
@@ -79,7 +111,7 @@ button {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    & > button{
+    & > button {
       width: 100%;
       cursor: pointer;
     }
@@ -284,10 +316,10 @@ button {
     & > .adding-form-content {
       & > .adding-form-item {
         margin: 20px 0;
-        & > div{
+        & > div {
           display: grid;
           grid-template-columns: 1fr 50px;
-          & > button{
+          & > button {
             cursor: pointer;
             border-radius: 20px;
             height: 26px;
