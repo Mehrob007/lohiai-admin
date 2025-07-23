@@ -24,10 +24,10 @@ export default function Textarea({
   // type = "text",
   value,
   required,
-  placeholder,
+  // placeholder,
   classNameLabel,
   classNameTitle,
-  classNameInput,
+  // classNameInput,
   classNameError,
   onChange,
 }: input) {
