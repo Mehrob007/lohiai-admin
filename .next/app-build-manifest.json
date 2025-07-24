@@ -1,0 +1,244 @@
+{
+  "pages": {
+    "/_not-found/page": [
+      "static/chunks/webpack-3aed9fe7526082cc.js",
+      "static/chunks/4bd1b696-2581ea8f93aa337b.js",
+      "static/chunks/684-4f4e9a23f11b8258.js",
+      "static/chunks/main-app-9499f5e3117b1eff.js",
+      "static/chunks/app/_not-found/page-28a891638b315c41.js"
+    ],
+    "/layout": [
+      "static/chunks/webpack-3aed9fe7526082cc.js",
+      "static/chunks/4bd1b696-2581ea8f93aa337b.js",
+      "static/chunks/684-4f4e9a23f11b8258.js",
+      "static/chunks/main-app-9499f5e3117b1eff.js",
+      "static/css/68417b267c00b5fe.css",
+      "static/chunks/604-842cc1057f74349c.js",
+      "static/chunks/app/layout-4c9ba3f0451a11b3.js"
+    ],
+    "/acts/page": [
+      "static/chunks/webpack-3aed9fe7526082cc.js",
+      "static/chunks/4bd1b696-2581ea8f93aa337b.js",
+      "static/chunks/684-4f4e9a23f11b8258.js",
+      "static/chunks/main-app-9499f5e3117b1eff.js",
+      "static/chunks/604-842cc1057f74349c.js",
+      "static/chunks/app/acts/page-90bb83f503d55166.js"
+    ],
+    "/adding-acts/[id]/page": [
+      "static/chunks/webpack-3aed9fe7526082cc.js",
+      "static/chunks/4bd1b696-2581ea8f93aa337b.js",
+      "static/chunks/684-4f4e9a23f11b8258.js",
+      "static/chunks/main-app-9499f5e3117b1eff.js",
+      "static/chunks/604-842cc1057f74349c.js",
+      "static/chunks/app/adding-acts/[id]/page-b6d7a9c0c14882f4.js"
+    ],
+    "/adding-acts/page": [
+      "static/chunks/webpack-3aed9fe7526082cc.js",
+      "static/chunks/4bd1b696-2581ea8f93aa337b.js",
+      "static/chunks/684-4f4e9a23f11b8258.js",
+      "static/chunks/main-app-9499f5e3117b1eff.js",
+      "static/chunks/604-842cc1057f74349c.js",
+      "static/chunks/app/adding-acts/page-bfe9e7573bad893e.js"
+    ],
+    "/adding-cadets/[id]/page": [
+      "static/chunks/webpack-3aed9fe7526082cc.js",
+      "static/chunks/4bd1b696-2581ea8f93aa337b.js",
+      "static/chunks/684-4f4e9a23f11b8258.js",
+      "static/chunks/main-app-9499f5e3117b1eff.js",
+      "static/chunks/604-842cc1057f74349c.js",
+      "static/chunks/app/adding-cadets/[id]/page-db5a5d187bad3400.js"
+    ],
+    "/adding-cadets/page": [
+      "static/chunks/webpack-3aed9fe7526082cc.js",
+      "static/chunks/4bd1b696-2581ea8f93aa337b.js",
+      "static/chunks/684-4f4e9a23f11b8258.js",
+      "static/chunks/main-app-9499f5e3117b1eff.js",
+      "static/chunks/604-842cc1057f74349c.js",
+      "static/chunks/app/adding-cadets/page-d3bbb6f87aa446ce.js"
+    ],
+    "/adding-college-history/[id]/page": [
+      "static/chunks/webpack-3aed9fe7526082cc.js",
+      "static/chunks/4bd1b696-2581ea8f93aa337b.js",
+      "static/chunks/684-4f4e9a23f11b8258.js",
+      "static/chunks/main-app-9499f5e3117b1eff.js",
+      "static/chunks/604-842cc1057f74349c.js",
+      "static/chunks/app/adding-college-history/[id]/page-d663ac214493cc62.js"
+    ],
+    "/adding-college-history/page": [
+      "static/chunks/webpack-3aed9fe7526082cc.js",
+      "static/chunks/4bd1b696-2581ea8f93aa337b.js",
+      "static/chunks/684-4f4e9a23f11b8258.js",
+      "static/chunks/main-app-9499f5e3117b1eff.js",
+      "static/chunks/604-842cc1057f74349c.js",
+      "static/chunks/app/adding-college-history/page-32ef4ae7881e1dde.js"
+    ],
+    "/adding-college-structure/page": [
+      "static/chunks/webpack-3aed9fe7526082cc.js",
+      "static/chunks/4bd1b696-2581ea8f93aa337b.js",
+      "static/chunks/684-4f4e9a23f11b8258.js",
+      "static/chunks/main-app-9499f5e3117b1eff.js",
+      "static/chunks/604-842cc1057f74349c.js",
+      "static/chunks/app/adding-college-structure/page-87178116c8ac2ac1.js"
+    ],
+    "/adding-college-structure/[id]/page": [
+      "static/chunks/webpack-3aed9fe7526082cc.js",
+      "static/chunks/4bd1b696-2581ea8f93aa337b.js",
+      "static/chunks/684-4f4e9a23f11b8258.js",
+      "static/chunks/main-app-9499f5e3117b1eff.js",
+      "static/chunks/604-842cc1057f74349c.js",
+      "static/chunks/app/adding-college-structure/[id]/page-6455ce40c74d940d.js"
+    ],
+    "/adding-educational-plans/[id]/page": [
+      "static/chunks/webpack-3aed9fe7526082cc.js",
+      "static/chunks/4bd1b696-2581ea8f93aa337b.js",
+      "static/chunks/684-4f4e9a23f11b8258.js",
+      "static/chunks/main-app-9499f5e3117b1eff.js",
+      "static/chunks/604-842cc1057f74349c.js",
+      "static/chunks/app/adding-educational-plans/[id]/page-7f5bc26687401bc5.js"
+    ],
+    "/adding-educational-plans/page": [
+      "static/chunks/webpack-3aed9fe7526082cc.js",
+      "static/chunks/4bd1b696-2581ea8f93aa337b.js",
+      "static/chunks/684-4f4e9a23f11b8258.js",
+      "static/chunks/main-app-9499f5e3117b1eff.js",
+      "static/chunks/604-842cc1057f74349c.js",
+      "static/chunks/app/adding-educational-plans/page-a3deb471d7a15f39.js"
+    ],
+    "/adding-leadership/[id]/page": [
+      "static/chunks/webpack-3aed9fe7526082cc.js",
+      "static/chunks/4bd1b696-2581ea8f93aa337b.js",
+      "static/chunks/684-4f4e9a23f11b8258.js",
+      "static/chunks/main-app-9499f5e3117b1eff.js",
+      "static/chunks/604-842cc1057f74349c.js",
+      "static/chunks/app/adding-leadership/[id]/page-31da49568698651a.js"
+    ],
+    "/adding-leadership/page": [
+      "static/chunks/webpack-3aed9fe7526082cc.js",
+      "static/chunks/4bd1b696-2581ea8f93aa337b.js",
+      "static/chunks/684-4f4e9a23f11b8258.js",
+      "static/chunks/main-app-9499f5e3117b1eff.js",
+      "static/chunks/604-842cc1057f74349c.js",
+      "static/chunks/app/adding-leadership/page-bbf0e5ba7ad386ea.js"
+    ],
+    "/adding-news/[id]/page": [
+      "static/chunks/webpack-3aed9fe7526082cc.js",
+      "static/chunks/4bd1b696-2581ea8f93aa337b.js",
+      "static/chunks/684-4f4e9a23f11b8258.js",
+      "static/chunks/main-app-9499f5e3117b1eff.js",
+      "static/chunks/604-842cc1057f74349c.js",
+      "static/chunks/app/adding-news/[id]/page-d90f87adb5735a90.js"
+    ],
+    "/adding-news/page": [
+      "static/chunks/webpack-3aed9fe7526082cc.js",
+      "static/chunks/4bd1b696-2581ea8f93aa337b.js",
+      "static/chunks/684-4f4e9a23f11b8258.js",
+      "static/chunks/main-app-9499f5e3117b1eff.js",
+      "static/chunks/604-842cc1057f74349c.js",
+      "static/chunks/app/adding-news/page-0c43d8551159b4d5.js"
+    ],
+    "/adding-outputs/[id]/page": [
+      "static/chunks/webpack-3aed9fe7526082cc.js",
+      "static/chunks/4bd1b696-2581ea8f93aa337b.js",
+      "static/chunks/684-4f4e9a23f11b8258.js",
+      "static/chunks/main-app-9499f5e3117b1eff.js",
+      "static/chunks/604-842cc1057f74349c.js",
+      "static/chunks/app/adding-outputs/[id]/page-7cbd6531531a9481.js"
+    ],
+    "/adding-outputs/page": [
+      "static/chunks/webpack-3aed9fe7526082cc.js",
+      "static/chunks/4bd1b696-2581ea8f93aa337b.js",
+      "static/chunks/684-4f4e9a23f11b8258.js",
+      "static/chunks/main-app-9499f5e3117b1eff.js",
+      "static/chunks/604-842cc1057f74349c.js",
+      "static/chunks/app/adding-outputs/page-cbdb682b297fc07c.js"
+    ],
+    "/adding-pedagogical-council/[id]/page": [
+      "static/chunks/webpack-3aed9fe7526082cc.js",
+      "static/chunks/4bd1b696-2581ea8f93aa337b.js",
+      "static/chunks/684-4f4e9a23f11b8258.js",
+      "static/chunks/main-app-9499f5e3117b1eff.js",
+      "static/chunks/604-842cc1057f74349c.js",
+      "static/chunks/app/adding-pedagogical-council/[id]/page-6713d63d66fc47f3.js"
+    ],
+    "/adding-pedagogical-council/page": [
+      "static/chunks/webpack-3aed9fe7526082cc.js",
+      "static/chunks/4bd1b696-2581ea8f93aa337b.js",
+      "static/chunks/684-4f4e9a23f11b8258.js",
+      "static/chunks/main-app-9499f5e3117b1eff.js",
+      "static/chunks/604-842cc1057f74349c.js",
+      "static/chunks/app/adding-pedagogical-council/page-84d6e2e282c505a2.js"
+    ],
+    "/cadets/page": [
+      "static/chunks/webpack-3aed9fe7526082cc.js",
+      "static/chunks/4bd1b696-2581ea8f93aa337b.js",
+      "static/chunks/684-4f4e9a23f11b8258.js",
+      "static/chunks/main-app-9499f5e3117b1eff.js",
+      "static/chunks/604-842cc1057f74349c.js",
+      "static/chunks/app/cadets/page-98449b0d7c44b0ff.js"
+    ],
+    "/college-history/page": [
+      "static/chunks/webpack-3aed9fe7526082cc.js",
+      "static/chunks/4bd1b696-2581ea8f93aa337b.js",
+      "static/chunks/684-4f4e9a23f11b8258.js",
+      "static/chunks/main-app-9499f5e3117b1eff.js",
+      "static/chunks/604-842cc1057f74349c.js",
+      "static/chunks/app/college-history/page-6889584acc53df8a.js"
+    ],
+    "/college-structure/page": [
+      "static/chunks/webpack-3aed9fe7526082cc.js",
+      "static/chunks/4bd1b696-2581ea8f93aa337b.js",
+      "static/chunks/684-4f4e9a23f11b8258.js",
+      "static/chunks/main-app-9499f5e3117b1eff.js",
+      "static/chunks/604-842cc1057f74349c.js",
+      "static/chunks/app/college-structure/page-2cc617b21eaf3522.js"
+    ],
+    "/educational-plans/page": [
+      "static/chunks/webpack-3aed9fe7526082cc.js",
+      "static/chunks/4bd1b696-2581ea8f93aa337b.js",
+      "static/chunks/684-4f4e9a23f11b8258.js",
+      "static/chunks/main-app-9499f5e3117b1eff.js",
+      "static/chunks/604-842cc1057f74349c.js",
+      "static/chunks/app/educational-plans/page-f9cc17568e74e339.js"
+    ],
+    "/leadership/page": [
+      "static/chunks/webpack-3aed9fe7526082cc.js",
+      "static/chunks/4bd1b696-2581ea8f93aa337b.js",
+      "static/chunks/684-4f4e9a23f11b8258.js",
+      "static/chunks/main-app-9499f5e3117b1eff.js",
+      "static/chunks/604-842cc1057f74349c.js",
+      "static/chunks/app/leadership/page-3384895c96c61e42.js"
+    ],
+    "/login/page": [
+      "static/chunks/webpack-3aed9fe7526082cc.js",
+      "static/chunks/4bd1b696-2581ea8f93aa337b.js",
+      "static/chunks/684-4f4e9a23f11b8258.js",
+      "static/chunks/main-app-9499f5e3117b1eff.js",
+      "static/chunks/604-842cc1057f74349c.js",
+      "static/chunks/app/login/page-c076b2093467cce8.js"
+    ],
+    "/outputs/page": [
+      "static/chunks/webpack-3aed9fe7526082cc.js",
+      "static/chunks/4bd1b696-2581ea8f93aa337b.js",
+      "static/chunks/684-4f4e9a23f11b8258.js",
+      "static/chunks/main-app-9499f5e3117b1eff.js",
+      "static/chunks/604-842cc1057f74349c.js",
+      "static/chunks/app/outputs/page-4f049621cce38d33.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-3aed9fe7526082cc.js",
+      "static/chunks/4bd1b696-2581ea8f93aa337b.js",
+      "static/chunks/684-4f4e9a23f11b8258.js",
+      "static/chunks/main-app-9499f5e3117b1eff.js",
+      "static/chunks/604-842cc1057f74349c.js",
+      "static/chunks/app/page-8cb94865eba0b1df.js"
+    ],
+    "/pedagogical-council/page": [
+      "static/chunks/webpack-3aed9fe7526082cc.js",
+      "static/chunks/4bd1b696-2581ea8f93aa337b.js",
+      "static/chunks/684-4f4e9a23f11b8258.js",
+      "static/chunks/main-app-9499f5e3117b1eff.js",
+      "static/chunks/604-842cc1057f74349c.js",
+      "static/chunks/app/pedagogical-council/page-1a1984cf55b42f5b.js"
+    ]
+  }
+}

@@ -1,0 +1,230 @@
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "dynamicRoutes": [
+    {
+      "page": "/adding-acts/[id]",
+      "regex": "^/adding\\-acts/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/adding\\-acts/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/adding-cadets/[id]",
+      "regex": "^/adding\\-cadets/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/adding\\-cadets/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/adding-college-history/[id]",
+      "regex": "^/adding\\-college\\-history/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/adding\\-college\\-history/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/adding-college-structure/[id]",
+      "regex": "^/adding\\-college\\-structure/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/adding\\-college\\-structure/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/adding-educational-plans/[id]",
+      "regex": "^/adding\\-educational\\-plans/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/adding\\-educational\\-plans/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/adding-leadership/[id]",
+      "regex": "^/adding\\-leadership/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/adding\\-leadership/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/adding-news/[id]",
+      "regex": "^/adding\\-news/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/adding\\-news/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/adding-outputs/[id]",
+      "regex": "^/adding\\-outputs/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/adding\\-outputs/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/adding-pedagogical-council/[id]",
+      "regex": "^/adding\\-pedagogical\\-council/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/adding\\-pedagogical\\-council/(?<nxtPid>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/acts",
+      "regex": "^/acts(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/acts(?:/)?$"
+    },
+    {
+      "page": "/adding-acts",
+      "regex": "^/adding\\-acts(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/adding\\-acts(?:/)?$"
+    },
+    {
+      "page": "/adding-cadets",
+      "regex": "^/adding\\-cadets(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/adding\\-cadets(?:/)?$"
+    },
+    {
+      "page": "/adding-college-history",
+      "regex": "^/adding\\-college\\-history(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/adding\\-college\\-history(?:/)?$"
+    },
+    {
+      "page": "/adding-college-structure",
+      "regex": "^/adding\\-college\\-structure(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/adding\\-college\\-structure(?:/)?$"
+    },
+    {
+      "page": "/adding-educational-plans",
+      "regex": "^/adding\\-educational\\-plans(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/adding\\-educational\\-plans(?:/)?$"
+    },
+    {
+      "page": "/adding-leadership",
+      "regex": "^/adding\\-leadership(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/adding\\-leadership(?:/)?$"
+    },
+    {
+      "page": "/adding-news",
+      "regex": "^/adding\\-news(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/adding\\-news(?:/)?$"
+    },
+    {
+      "page": "/adding-outputs",
+      "regex": "^/adding\\-outputs(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/adding\\-outputs(?:/)?$"
+    },
+    {
+      "page": "/adding-pedagogical-council",
+      "regex": "^/adding\\-pedagogical\\-council(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/adding\\-pedagogical\\-council(?:/)?$"
+    },
+    {
+      "page": "/cadets",
+      "regex": "^/cadets(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/cadets(?:/)?$"
+    },
+    {
+      "page": "/college-history",
+      "regex": "^/college\\-history(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/college\\-history(?:/)?$"
+    },
+    {
+      "page": "/college-structure",
+      "regex": "^/college\\-structure(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/college\\-structure(?:/)?$"
+    },
+    {
+      "page": "/educational-plans",
+      "regex": "^/educational\\-plans(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/educational\\-plans(?:/)?$"
+    },
+    {
+      "page": "/leadership",
+      "regex": "^/leadership(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/leadership(?:/)?$"
+    },
+    {
+      "page": "/login",
+      "regex": "^/login(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/login(?:/)?$"
+    },
+    {
+      "page": "/outputs",
+      "regex": "^/outputs(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/outputs(?:/)?$"
+    },
+    {
+      "page": "/pedagogical-council",
+      "regex": "^/pedagogical\\-council(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/pedagogical\\-council(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "RSC",
+    "varyHeader": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch",
+    "prefetchHeader": "Next-Router-Prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "Next-Router-Segment-Prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments"
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  },
+  "rewrites": []
+}
