@@ -39,7 +39,7 @@ export default function SectionTable({
   const deleteItem = async (
     url: string,
     get: () => Promise<void>,
-    id: string,
+    id: string
   ) => {
     try {
       const res = apiClient.delete(`${url}?id=${id}`);
@@ -50,7 +50,7 @@ export default function SectionTable({
     }
   };
   const editItem = (
-    id: string,
+    id: string
     // getUrl: string
   ) => {
     if (editOptions?.url) {
@@ -77,14 +77,23 @@ export default function SectionTable({
               />
               <div>
                 <h1>{item.main_title as string}</h1>
-                <p>{item.main_description as string}</p>
+                {/* <p>{item.main_description as string}</p> */}
+                {item?.main_description ? (
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: item?.main_description as string,
+                    }}
+                  />
+                ) : (
+                  ""
+                )}
               </div>
               <div>
                 {editOptions?.url && (
                   <button
                     onClick={() => {
                       editItem(
-                        item?._id as string,
+                        item?._id as string
                         // editOptions?.getUrl as string,
                       );
                       redirect(editOptions.url);
@@ -99,7 +108,7 @@ export default function SectionTable({
                       deleteItem(
                         deleteOptions.url,
                         deleteOptions.get,
-                        (item._id as string) || "",
+                        (item._id as string) || ""
                       )
                     }
                   >
