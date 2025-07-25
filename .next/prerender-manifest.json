@@ -1,30 +1,6 @@
 {
   "version": 4,
   "routes": {
-    "/adding-college-history": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/adding-college-history",
-      "dataRoute": "/adding-college-history.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
     "/adding-acts": {
       "experimentalBypassFor": [
         {
@@ -49,30 +25,6 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/adding-college-structure": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/adding-college-structure",
-      "dataRoute": "/adding-college-structure.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
     "/adding-educational-plans": {
       "experimentalBypassFor": [
         {
@@ -88,6 +40,30 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/adding-educational-plans",
       "dataRoute": "/adding-educational-plans.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/acts": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/acts",
+      "dataRoute": "/acts.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -145,30 +121,6 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/adding-news": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/adding-news",
-      "dataRoute": "/adding-news.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
     "/adding-outputs": {
       "experimentalBypassFor": [
         {
@@ -193,7 +145,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/acts": {
+    "/adding-news": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -206,32 +158,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/acts",
-      "dataRoute": "/acts.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/adding-pedagogical-council": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/adding-pedagogical-council",
-      "dataRoute": "/adding-pedagogical-council.rsc",
+      "srcRoute": "/adding-news",
+      "dataRoute": "/adding-news.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -265,7 +193,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/college-structure": {
+    "/adding-college-structure": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -278,8 +206,56 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/college-structure",
-      "dataRoute": "/college-structure.rsc",
+      "srcRoute": "/adding-college-structure",
+      "dataRoute": "/adding-college-structure.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/adding-pedagogical-council": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/adding-pedagogical-council",
+      "dataRoute": "/adding-pedagogical-council.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/college-history": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/college-history",
+      "dataRoute": "/college-history.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -313,7 +289,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/college-history": {
+    "/college-structure": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -326,8 +302,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/college-history",
-      "dataRoute": "/college-history.rsc",
+      "srcRoute": "/college-structure",
+      "dataRoute": "/college-structure.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -385,30 +361,6 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/outputs": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/outputs",
-      "dataRoute": "/outputs.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
     "/pedagogical-council": {
       "experimentalBypassFor": [
         {
@@ -424,6 +376,30 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/pedagogical-council",
       "dataRoute": "/pedagogical-council.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/outputs": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/outputs",
+      "dataRoute": "/outputs.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -456,13 +432,37 @@
         "x-next-revalidated-tags",
         "x-next-revalidate-tag-token"
       ]
+    },
+    "/adding-college-history": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/adding-college-history",
+      "dataRoute": "/adding-college-history.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
     }
   },
   "dynamicRoutes": {},
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "8913bbfd86f2966d678ddf75af1b0c3c",
-    "previewModeSigningKey": "6383339caca859a0b9a82ecac5f2340b3886c288542bd81504b52bf94fec5253",
-    "previewModeEncryptionKey": "7eec91d4182bb703df21c1e656621ff5a7e09f438d5960d30c4b94be9b64a0df"
+    "previewModeId": "5e1d885655d812df5624fe1d79bbea53",
+    "previewModeSigningKey": "c5290fbad5a6056d9c0d5cc0c7339d8b1ca5a764810c7d6cf4b84a0bec53dc22",
+    "previewModeEncryptionKey": "eddfdf1b336d1ec0fcdbcbbe4124af6f210f41e70813b92016fd14c0857a80db"
   }
 }
